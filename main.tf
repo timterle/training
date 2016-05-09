@@ -9,6 +9,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   key_name      = "${aws_key_pair.hashicorp-training.key_name}"
   subnet_id     = "${aws_subnet.hashicorp-training.id}"
+  new_variaable = "${foo}"
 
   vpc_security_group_ids = ["${aws_security_group.hashicorp-training.id}"]
 
